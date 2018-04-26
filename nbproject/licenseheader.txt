@@ -1,0 +1,9 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Alexander Little - alittle5@cnm.edu 
+${licensePrefix}Java - CIS 2235 - Ivonne Nelson
+${licensePrefix}Program 9 Enigma with polymorphism
+<#if licenseLast??>
+${licenseLast}
+</#if>

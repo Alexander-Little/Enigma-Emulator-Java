@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="562.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="littlep9.FXMLDocumentController">
+    <children>
+      <Label layoutX="9.0" layoutY="6.0" prefHeight="425.0" prefWidth="549.0" text="01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 00100000 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 00100000 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 00100000 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 00100000 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 00100000 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 00100000 01010100 01001000 01000101 00100000 01001010 01000001 01010110 01000001 00100000 01000101 01001110 01001001 01000111 01001101 01000001 00100000 01001101 01000001 01000011 01001000 01001001 01001110 01000101 " textFill="#405100" wrapText="true" />
+      <MenuBar blendMode="SRC_ATOP" layoutX="258.0" layoutY="203.0" prefHeight="25.0" prefWidth="100.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="menuSave" mnemonicParsing="false" text="Save" />
+                  <MenuItem fx:id="menuOpen" mnemonicParsing="false" text="Open" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem fx:id="menuAbout" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <ColorAdjust brightness="0.02" contrast="-0.28" hue="0.35" saturation="0.84" />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuBar>
+      <Label layoutX="14.0" layoutY="8.0" text="Alexander Little - alittle5@cnm.edu" textFill="WHITE">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtUserMsg" layoutX="215.0" layoutY="131.0" prefHeight="70.0" prefWidth="200.0" promptText="Enter your message to encrypt here..." styleClass="eventWindow" text="Black bears say Hey!" wrapText="true" />
+      <Label fx:id="lblMsgtobe" alignment="CENTER" layoutX="215.0" layoutY="114.0" prefHeight="17.0" prefWidth="200.0" text="--Message to be encrypted--" textFill="WHITE" />
+      <Button fx:id="btnEncode" layoutX="476.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Encode" textFill="#00078d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDecode" layoutX="475.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Decode" textFill="#bc0000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+        <Label fx:id="label" disable="true" layoutX="437.0" layoutY="239.0" minHeight="16" minWidth="69" text="Temp - Delete" visible="false" />
+      <Separator layoutY="225.0" prefHeight="13.0" prefWidth="562.0">
+         <effect>
+            <ColorAdjust brightness="0.21" contrast="1.0" hue="-0.1" saturation="1.0" />
+         </effect></Separator>
+      <Separator layoutX="1.0" layoutY="97.0" prefHeight="0.0" prefWidth="560.0">
+         <effect>
+            <ColorAdjust brightness="0.21" contrast="1.0" hue="-0.1" saturation="1.0" />
+         </effect></Separator>
+      <Separator layoutX="178.0" layoutY="97.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="23.0">
+         <effect>
+            <ColorAdjust brightness="0.21" contrast="1.0" hue="-0.1" saturation="1.0" />
+         </effect></Separator>
+      <Separator layoutX="429.0" layoutY="97.0" orientation="VERTICAL" prefHeight="134.0" prefWidth="23.0">
+         <effect>
+            <ColorAdjust brightness="0.21" contrast="1.0" hue="-0.1" saturation="1.0" />
+         </effect></Separator>
+      <Label layoutX="40.0" layoutY="106.0" text="-Encryption Key-" textFill="WHITE" />
+      <RadioButton fx:id="rbUseKey" layoutX="14.0" layoutY="146.0" mnemonicParsing="false" selected="true" text="Use this key" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="grpEncryptKey" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbGenKey" layoutX="14.0" layoutY="171.0" mnemonicParsing="false" text="Randomly generate a key" textFill="WHITE" toggleGroup="$grpEncryptKey" />
+      <TextField fx:id="txtUserKey" alignment="CENTER" layoutX="101.0" layoutY="144.0" prefHeight="25.0" prefWidth="57.0" promptText="(1-50)" text="41" />
+      <Label layoutX="26.0" layoutY="124.0" text="Enter a key between1-50" textFill="WHITE" />
+      <Label fx:id="lblResultBanner" alignment="CENTER" layoutX="-31.0" layoutY="238.0" prefHeight="17.0" prefWidth="560.0" text="---Encrypted Message Info---" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Semibold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="276.0" text="Message:" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="331.0" text="  Coded &#10;Message:" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="382.0" text="Key:" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtDecodedMsg" editable="false" layoutX="110.0" layoutY="276.0" prefHeight="47.0" prefWidth="302.0" promptText="Decoded message will appear here..." wrapText="true" />
+      <TextArea fx:id="txtEncodedMsg" editable="false" layoutX="110.0" layoutY="328.0" prefHeight="47.0" prefWidth="302.0" promptText="Encoded message will appear here..." wrapText="true" />
+      <TextField fx:id="txtKey" alignment="CENTER" editable="false" layoutX="103.0" layoutY="382.0" prefHeight="28.0" prefWidth="36.0" promptText="...">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font></TextField>
+      <Label layoutX="428.0" layoutY="8.0" text="CIS 2235 Java - Ivonne Nelson" textFill="WHITE">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1.0" layoutY="45.0" prefHeight="3.0" prefWidth="560.0">
+         <effect>
+            <ColorAdjust brightness="0.21" contrast="1.0" hue="-0.1" saturation="1.0" />
+         </effect></Separator>
+      <Label layoutX="151.0" layoutY="382.0" text="Encryption Type:" textFill="WHITE">
+         <font>
+            <Font name="Corbel Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEncryptType" alignment="CENTER" layoutX="284.0" layoutY="382.0" prefHeight="28.0" prefWidth="66.0" promptText="...">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Separator layoutX="449.0" layoutY="231.0" orientation="VERTICAL" prefHeight="202.0" prefWidth="3.0">
+         <effect>
+            <ColorAdjust brightness="0.21" contrast="1.0" hue="-0.1" saturation="1.0" />
+         </effect></Separator>
+        <Button fx:id="btnClear" layoutX="475.0" layoutY="311.0" prefHeight="25.0" prefWidth="59.0" text="Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="462.0" layoutY="387.0" prefHeight="35.0" prefWidth="100.0" text="Note:  File required&#10;           to decode" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="457.0" layoutY="106.0" text="-Encryption Type-" textFill="WHITE" />
+      <RadioButton fx:id="rbPrime" layoutX="461.0" layoutY="133.0" mnemonicParsing="false" selected="true" text="Prime Shift" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="grpEncryptType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbShifty" layoutX="461.0" layoutY="163.0" mnemonicParsing="false" text="Shifty" textFill="WHITE" toggleGroup="$grpEncryptType" />
+      <RadioButton fx:id="rbDailey" layoutX="461.0" layoutY="193.0" mnemonicParsing="false" text="Dailey" textFill="WHITE" toggleGroup="$grpEncryptType" />
+      <Label alignment="CENTER" layoutY="13.0" prefHeight="24.0" prefWidth="560.0" text="The Java Enigma Machine" textFill="#d323ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="13.0" prefHeight="24.0" prefWidth="560.0" text="The Java Enigma Machine" textFill="#d323ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" blendMode="MULTIPLY" layoutX="1.0" layoutY="11.0" prefHeight="24.0" prefWidth="560.0" text="The Java Enigma Machine">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="4.0" layoutY="48.0" prefHeight="47.0" prefWidth="245.0" text="To Encode: &#10;1) Enter your message in the text box below.&#10;2) Select Enter a Key or Enigma-Generated Key.&#10;3) Select Encryption type.&#10;4) Press the encode button.&#10;5) Select File &gt; Save File to save your message to a file." wrapText="true">
+         <effect>
+            <ColorAdjust brightness="-0.5" hue="0.65" saturation="0.74" />
+         </effect>
+         <font>
+            <Font name="Corbel Bold" size="12.0" />
+         </font></TextArea>
+      <TextArea blendMode="SRC_ATOP" editable="false" layoutX="315.0" layoutY="48.0" prefHeight="47.0" prefWidth="245.0" text="To Decode: &#10;1) Press the Decode button. &#10;2) Browse to the file to be decoded.&#10;3) After you select your file, your decrypted message information will apear below." wrapText="true">
+         <effect>
+            <ColorAdjust brightness="-0.5" hue="0.65" saturation="0.74" />
+         </effect>
+         <font>
+            <Font name="Corbel Bold" size="12.0" />
+         </font></TextArea>
+      <Separator layoutY="229.0" prefHeight="13.0" prefWidth="562.0">
+         <effect>
+            <ColorAdjust brightness="0.21" contrast="1.0" hue="-0.1" saturation="1.0" />
+         </effect>
+      </Separator>
+      <Separator layoutY="227.0" prefHeight="13.0" prefWidth="562.0">
+         <effect>
+            <ColorAdjust brightness="0.05" contrast="1.0" hue="0.35" saturation="1.0" />
+         </effect>
+      </Separator>
+    </children>
+</AnchorPane>
