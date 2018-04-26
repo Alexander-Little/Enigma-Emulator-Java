@@ -16,6 +16,7 @@ been used.
 To use the enigma emulator:
 
 -To encode-
+------------------------------------------------------
 	Enter the message you wish to encode into 
 	the Message to be encrypted text area and
 	press the encode button. You may also set
@@ -26,6 +27,7 @@ To use the enigma emulator:
 	you wish to log your coded message/key
 	to a text file. 
 -To decode-
+------------------------------------------------------
 	Select file>open and choose the .txt file
 	you wish to decode, then press decode.
 	The decoded message will then appear
